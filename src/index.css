@@ -10,7 +10,7 @@ body {
 
 header {
   padding: 10px 60px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: #373b69;
   color: white;
@@ -19,7 +19,7 @@ header {
 header ul {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   padding: 0;
 }
 
@@ -27,14 +27,24 @@ header ul li {
   display: inline-block;
   text-decoration: none;
   margin: 0 50px;
+  cursor: pointer;
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
 }
 
 .search {
-    background-color: transparent;
-    border: 2px solid white;
-    padding: 0.5rem 1 rem;
-    border-radius: 10px;
-    font-size: 1rem;
-    color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 0.5rem 1 rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: white;
 }
 
+.searchBtn {
+  cursor: pointer;
+}
