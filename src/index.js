@@ -1,3 +1,4 @@
 import './index.css'
+import {homePage} from './modules/fetchData.js'
 
-console.log('Hello JS');
+homePage();
