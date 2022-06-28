@@ -1,3 +1,30 @@
-h1 {
-    color: blue;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eee;
+}
+
+header {
+  padding: 10px 60px;
+  justify-content: center;
+  align-items: center;
+  background-color: #373b69;
+  color: white;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+header ul li {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 50px;
 }
