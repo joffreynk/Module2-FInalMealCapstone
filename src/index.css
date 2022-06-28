@@ -8,28 +8,14 @@ body {
   background: #eee;
 }
 
-header {
-  padding: 10px 60px;
+nav {
+  display: flex;
   justify-content: space-around;
   align-items: center;
+  min-height: 8vh;
   background-color: #373b69;
   color: white;
   font-family: 'poppins', sans-serif;
-  font-size: 20px;
-}
-
-header ul {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0;
-}
-
-header ul li {
-  display: inline-block;
-  text-decoration: none;
-  margin: 0 50px;
-  cursor: pointer;
 }
 
 .logo a {
@@ -39,17 +25,13 @@ header ul li {
   cursor: pointer;
 }
 
-.search {
-  background-color: transparent;
-  border: 2px solid white;
-  padding: 0.5rem 1 rem;
-  border-radius: 10px;
-  font-size: 1rem;
-  color: white;
-}
-
-.searchBtn {
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+  list-style: none;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .burger {
@@ -58,22 +40,22 @@ header ul li {
 
 .burger div {
   width: 25px;
-  height: 3px;
+  height: 5px;
   background-color: rgb(226, 226, 226);
   margin: 5px;
 }
 
-@media screeen and (max-width: 768px) {
+@media screeen and (max-width: 1024px) {
   .nav-links {
     width: 60%;
   }
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
 
-    body{
-        overflow-x:
-    }
   .nav-links {
     position: absolute;
     right: 0;
@@ -84,6 +66,31 @@ header ul li {
     flex-direction: column;
     align-items: center;
     width: 50%;
-    transform: translateX(100%)
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
