@@ -10,10 +10,12 @@ body {
 
 header {
   padding: 10px 60px;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: #373b69;
   color: white;
+  font-family: 'poppins', sans-serif;
+  font-size: 20px;
 }
 
 header ul {
@@ -31,6 +33,7 @@ header ul li {
 }
 
 .logo a {
+  align-items: center;
   text-decoration: none;
   color: white;
   cursor: pointer;
@@ -47,4 +50,40 @@ header ul li {
 
 .searchBtn {
   cursor: pointer;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
+}
+
+@media screeen and (max-width: 768px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+    body{
+        overflow-x:
+    }
+  .nav-links {
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    top: 8vh;
+    background-color: #5d4954;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%)
+  }
 }
