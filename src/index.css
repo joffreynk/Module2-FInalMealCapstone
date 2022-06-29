@@ -105,7 +105,25 @@ main ul li h4 {
 }
 
 .like {
-  padding-right: 5px;
+  padding: 1px;
+  margin-right: 5px;
+  color: red;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.n-likes {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.like:hover {
+  transform: rotate(360deg);
+  transform: scale(1.01);
+  background-color: red;
+  color: #000;
+  font-weight: 700;
 }
 
 .comments,
