@@ -1,5 +1,6 @@
-import './index.css'
-import {homePage} from './modules/fetchData.js'
+import './index.css';
+// import addLikes from './modules/addLikes';
+import {homePage} from './modules/fetchData.js';
 
 const navSlide = () => {
   const burger = document.querySelector('.burger')
@@ -18,3 +19,13 @@ const navSlide = () => {
 
 navSlide()
 homePage();
+// addLikes();
+
+
+// const likes = document.querySelectorAll('.like');
+// likes.forEach(like => {
+//   like.addEventListener('click', ()=>{
+//     console.log('clicked');
+//     console.log(like);
+//   });
+// });

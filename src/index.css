@@ -94,3 +94,8 @@ nav {
     transform: translateX(0);
   }
 }
+
+.like {
+  font-size:45px;
+  cursor: pointer;
+}
