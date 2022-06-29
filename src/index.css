@@ -25,6 +25,11 @@ nav {
   cursor: pointer;
 }
 
+.description {
+  display: flex;
+  justify-content: space-between;
+}
+
 .nav-links {
   display: flex;
   justify-content: space-around;
@@ -79,7 +84,6 @@ main ul li {
   border: 1px solid #fff;
   box-shadow: 0 5px;
   overflow: hidden;
-  cursor: pointer;
   padding-top: 15px;
 }
 
@@ -102,6 +106,7 @@ main ul li h4 {
   display: flex;
   padding: 5px 10px;
   align-items: center;
+  flex-direction: column;
 }
 
 .like {
@@ -124,6 +129,10 @@ main ul li h4 {
   background-color: red;
   color: #000;
   font-weight: 700;
+  padding-right: 5px;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
 }
 
 .comments,
