@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./index.css">
-<script defer src="main.js"></script></head>
-<body>
-    <h1>hello world</h1>
+    <link rel="stylesheet" href="./index.css" />
+  <script defer src="main.js"></script></head>
+  <body>
+    <container class="wrapper">
+      <nav>
+        <div class="logo">
+          <a href="#">Logo</a>
+        </div>
+        <ul class="nav-links">
+          <li>Home</li>
+          <li>Dishes</li>
+          <li>Ingredient</li>
+          <li>Contact</li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+          <div class="line4"></div>
+        </div>
+      </nav>
+    </container>
+    <main>
+      <h2>Food List</h2>
+      <ul class="food-list" id="food-list">
+        <li>
+          <img src="./beef.png" alt="food name"/>
+          <div class="description">
+            <h4>image title</h4>
+            <div class="likes">
+              <p class="like">&#128154;</p>
+              <p class="n-likes">5</p>
+            </div>
+          </div>
+          <button class="comments">Comments</button>
+          <button class="reservations">Reservations</button>
+        </li>
+      </ul>
+    </main>
+
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>

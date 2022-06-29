@@ -1,5 +1,5 @@
 import './index.css'
-import {homePage} from './modules/fetchData.js'
+import {homePage} from './modules/fetchData.js';
 
 const navSlide = () => {
   const burger = document.querySelector('.burger')
