@@ -10,12 +10,18 @@ const addLikes = () => {
   })
 }
 
+const loadPopUpComment = (data) => {
+  
+}
+
 const popUpComment = () => {
   const comments = document.querySelectorAll('.comments');
   comments.forEach((comment) => {
     comment.addEventListener('click', (e) =>{
       const id = e.target.id.slice(7);
-      fetchComments(id);
+      fetchComments(id).then(data=>{
+        loadPopUpComment(data)
+      });
     })
   });
 }

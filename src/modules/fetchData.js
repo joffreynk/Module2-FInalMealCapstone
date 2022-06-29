@@ -18,15 +18,18 @@ const homePage = async () => {
 
   const likes =  JSON.parse(JSON.stringify(likesData));
   let foodlist = JSON.parse(JSON.stringify( foodData.categories));
-
+  var array = foodlist;
   listFood(foodlist, likes);
 }
 
 const fetchComments = async (id) => {
-  const commentResponse = await fetch(involvementURL+'/comments?item_id='+id);
-  const commentData = await commentResponse.json();
-  console.log(commentData);
-
+  const foodResponse = await fetch(url);
+  const foodData = await foodResponse.json();
+  const food = foodData.categories.filter((f) => Number(f.idCategory)=== Number(id))[0]
+  let commentData = []
+  const commentResponse = await fetch(`${involvementURL}comments?item_id=${id}`);
+  if(commentResponse.ok) commentData = await commentResponse.json();
+  return { commentData, food }
 }
 
 const createGame = async () => {
