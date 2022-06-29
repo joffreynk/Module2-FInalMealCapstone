@@ -1,5 +1,6 @@
 import './index.css';
 // import addLikes from './modules/addLikes';
+
 import {homePage} from './modules/fetchData.js';
 
 const navSlide = () => {

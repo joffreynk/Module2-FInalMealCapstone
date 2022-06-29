@@ -45,6 +45,105 @@ nav {
   margin: 5px;
 }
 
+main h2 {
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+  padding: 15px;
+  color: #333;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+#food-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+main ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+main ul li {
+  display: inline-block;
+  justify-content: center;
+  height: 350px;
+  width: 350px;
+  border: 1px solid #fff;
+  box-shadow: 0 5px;
+  overflow: hidden;
+  cursor: pointer;
+  padding-top: 15px;
+}
+
+main ul li img {
+  padding-bottom: 20px;
+  transition: 0.2s linear;
+  width: 100%;
+  height: 60%;
+}
+
+main ul li h4 {
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+.likes {
+  display: flex;
+  padding: 5px 10px;
+  align-items: center;
+}
+
+.like {
+  padding-right: 5px;
+}
+
+.comments,
+.reservations {
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.comments:hover {
+  transform: rotate(360deg);
+  transform: scale(1.01);
+  background-color: aqua;
+  color: #000;
+  font-weight: 700;
+}
+
+.reservations:hover {
+  transform: rotate(360deg);
+  transform: scale(1.01);
+  background-color: #b9eb4d;
+  color: #000;
+  font-weight: 700;
+}
+
+.comments {
+  background: #373b69;
+  color: white;
+}
+
+.reservations {
+  background: #ea4e15;
+  color: white;
+}
+
 @media screeen and (max-width: 1024px) {
   .nav-links {
     width: 60%;

@@ -9,6 +9,7 @@ const getOject = (arr) => {
   return ob;
 };
 
+
 const listFood = (baseList, involvementValue) => {
   const list = document.getElementById('food-list');
   list.innerHTML = '';
@@ -24,5 +25,6 @@ const listFood = (baseList, involvementValue) => {
   addLikes();
   popUpComment();
 }
+
 
 export default listFood;
