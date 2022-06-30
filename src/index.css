@@ -204,7 +204,8 @@ main ul li h4 {
 }
 
 .comment-pop-image img {
-  width: 80%;
+  width: 300px;
+  
 }
 
 .foodDes {
@@ -212,7 +213,7 @@ main ul li h4 {
     'Lucida Sans', Arial, sans-serif;
   margin-bottom: 10px;
   font-size: 12px;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 .add-h5 {
@@ -222,7 +223,17 @@ main ul li h4 {
 }
 
 #pop li {
-  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed; 
+  width: 80wv;
+  top:0;
+  left: 20%;
+  bottom: 5%;
+  right: 20%;
+  background: white;
+  
 }
 
 .formcomment {
@@ -234,19 +245,20 @@ main ul li h4 {
   background-color: #ccc;
 }
 
-#username,#comment {
+#username,
+#comment {
   width: 100%;
-  margin: 2px 0; 
+  margin: 2px 0;
   border-radius: 4px;
   box-shadow: none;
 }
 
 #comment {
-  height: 50px; 
+  height: 50px;
 }
 
-.add-comment{
-  cursor: pointer; 
+.add-comment {
+  cursor: pointer;
   padding: 5px 10px;
   border-radius: 4px;
   transition: all 0.3s ease;
