@@ -60,7 +60,7 @@ main h2 {
   text-transform: capitalize;
 }
 
-#food-list {
+#food-list, #pop {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -79,12 +79,11 @@ main ul {
 main ul li {
   display: inline-block;
   justify-content: center;
-  height: 350px;
-  width: 350px;
   border: 1px solid #fff;
-  box-shadow: 0 5px;
+  box-shadow: 0 5px rgba(146, 146, 146, 0.5);
   overflow: hidden;
   padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 main ul li img {
@@ -112,9 +111,10 @@ main ul li h4 {
 .like {
   padding: 1px;
   margin-right: 5px;
-  color: red;
   object-fit: cover;
   cursor: pointer;
+  border: none;
+  font-size: 30px;
 }
 
 .n-likes {
@@ -127,11 +127,9 @@ main ul li h4 {
   transform: rotate(360deg);
   transform: scale(1.01);
   background-color: red;
-  color: #000;
   font-weight: 700;
   padding-right: 5px;
   font-size: 30px;
-  border: none;
   cursor: pointer;
 }
 
@@ -143,6 +141,8 @@ main ul li h4 {
   cursor: pointer;
   border-radius: 4px;
   transition: all 0.3s ease;
+  font-size: 20px;
+  border: none;
 }
 
 .comments:hover {
@@ -169,6 +169,14 @@ main ul li h4 {
 .reservations {
   background: #ea4e15;
   color: white;
+}
+
+#pop li {
+  width: 400px;
+}
+
+.comment-pop-image img{
+  width: 80%;
 }
 
 @media screeen and (max-width: 1024px) {
