@@ -1,13 +1,8 @@
-import listFood from './ListFood.js'
+import listFood from './ListFood.js';
 
 const url = 'https://www.themealdb.com/api/json/v1/1/categories.php';
-//const involvementURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/dWoXUOjG0DcHF4rsGv6E/';
 
 const involvementURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/4UvdTn5NAXeyK3iSlBaQ/';
-
-
-// LHzSSClEk3ASHMQ30bMI
-
 
 const homePage = async () => {
   const foodResponse = await fetch(url);
@@ -20,7 +15,7 @@ const homePage = async () => {
   let foodlist = JSON.parse(JSON.stringify( foodData.categories));
   var array = foodlist;
   listFood(foodlist, likes);
-}
+};
 
 const fetchComments = async (id) => {
   const foodResponse = await fetch(url);
@@ -57,20 +52,6 @@ const addLike = async (like) => {
   return data;
 };
 
-const addReservation = async (reservation) => {
-  const optionsData = {
-    method: 'POST',
-    body: reservation,
-    headers: {
-      'Content-Type': 'application/json;charset=utf-8',
-    },
-  };
-  const results = await fetch(involvementURL+'reservation/', optionsData);
-  const data = await results.text();
-  homePage();
-  return data;
-};
-
 const addComment = async (comment) => {
   const optionsData = {
     method: 'POST',
@@ -80,10 +61,10 @@ const addComment = async (comment) => {
     },
   };
   const results = await fetch(involvementURL+'comments/', optionsData);
-  const data = await results.text()
-  return data
+  const data = await results.text();
+  return data;
 };
 
 
 
-export {homePage, addLike, addComment, addReservation, fetchComments};
+export {homePage, addLike, addComment, fetchComments};

@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="./index.css" />
   </head>
   <body>
-    <container class="wrapper">
+    <header class="wrapper">
       <nav>
         <div class="logo">
           <a href="#">Logo</a>
@@ -26,28 +26,19 @@
           <div class="line4"></div>
         </div>
       </nav>
-    </container>
+    </header>
     <main>
-      <h2>Food List</h2>
-      <ul id="pop">
+      <h2>Food List <span id="foodCounter"></span></h2>
+      <ul id="pop" class="popupremove"></ul>
 
-      </ul>
       <ul class="food-list" id="food-list">
-        <li>
-          <img src="./beef.png" alt="food name" />
-          <div class="description">
-            <h4>image title</h4>
-            <div class="likes">
-              <p class="like">&#128154;</p>
-              <p class="n-likes">5</p>
-            </div>
-          </div>
-          <button class="comments">Comments</button>
-          <button class="reservations">Reservations</button>
+        <li class="loader">
         </li>
       </ul>
     </main>
-
+    <footer>
+      <p>Created by Joffrey and Vincent under @Microverse supervision</p>
+    </footer>
     <script src="./index.js"></script>
   </body>
 </html>
