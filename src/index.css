@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande';
+  font-family:'Courier New', Courier, monospace;
 }
 
 body {
@@ -175,6 +175,11 @@ main ul li h4 {
   font-weight: 700;
 }
 
+.reservations {
+  background: #ea4e15;
+  color: white;
+}
+
 .reservations:hover {
   transform: rotate(360deg);
   transform: scale(1.01);
@@ -182,13 +187,6 @@ main ul li h4 {
   color: #000;
   font-weight: 700;
 }
-
-.reservations {
-  background: #ea4e15;
-  color: white;
-}
-
-/**Styling pop up window**/
 
 .close-button {
   position: absolute;
@@ -242,7 +240,7 @@ main ul li h4 {
   flex-direction: column;
   justify-content: center;
   position: fixed;
-  width: 80wv;
+  width: 80vw;
   top: 0;
   left: 20%;
   bottom: 5px;
@@ -317,11 +315,9 @@ main ul li h4 {
 }
 
 @keyframes spin {
-
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
