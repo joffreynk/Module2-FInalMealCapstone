@@ -1,15 +1,17 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Project Name
 
-> Description the project.
+JavaScript capstone project - Your API-based webapp
 
+## Description the project.
+You will select an API that provides data about a topic that you like and then build the webapp around it. The webapp will have 2 user interfaces
+A home page showing a list of items that you can "like."
+A popup window with more data about an item that you can use to comment on it or reserve it for a period of time.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML/CSS
+-Javascript
+-Webpack
 
 ## Live Demo (if available)
 
@@ -40,11 +42,11 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author1**
+👤 **Joffrey Nkeshimana**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/JoffreyNK)
+- Twitter: [@twitterhandle](https://twitter.com/@joffreynk)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/@joffreynk)
 
 👤 **Vincent Abuya**
 
