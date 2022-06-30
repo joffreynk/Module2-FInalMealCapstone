@@ -14,7 +14,7 @@ const getOject = (arr) => {
 const listFood = (baseList, involvementValue) => {
   const list = document.getElementById('food-list');
   list.innerHTML = ''
-  const objectkey = getOject(involvementValue)
+  const objectkey = getOject(involvementValue);
   document.getElementById('foodCounter').innerHTML = `(${counter(baseList)})`;
   baseList.forEach((food) => {
     const foodId = Number(food.idCategory);
