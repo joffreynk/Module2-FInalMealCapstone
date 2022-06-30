@@ -1,10 +1,12 @@
+/* eslint-disable */
+
 import { addLike, addComment, fetchComments } from './fetchData.js';
 import counter from './counter.js';
 
 const addLikes = () => {
   const likes = document.querySelectorAll('.like');
-  likes.forEach(like=>{
-    like.addEventListener('click', (e)=>{
+  likes.forEach((like) => {
+    like.addEventListener('click', (e) => {
       const id = e.target.id.slice(4);
       addLike({ item_id: id });
     });
@@ -12,7 +14,7 @@ const addLikes = () => {
 };
 
 const listComments = (comments) => {
-  let div = '';
+  let div = ''
   comments.forEach((comment) => {
     div += `<p class='popup-single-comment' > ${comment.creation_date} ${comment.username}:  ${comment.comment}</p>`;
   });
@@ -22,27 +24,33 @@ const listComments = (comments) => {
 const closepopup = () => {
   const close = document.querySelector('.close-button');
   close.addEventListener('click', () => {
-    document.querySelector('#pop').removeChild(document.querySelector('#pop li'))
-    document.getElementById('pop').style.display = 'none'
-  })
-}
+    document
+      .querySelector('#pop')
+      .removeChild(document.querySelector('#pop li'));
+    document.getElementById('pop').style.display = 'none';
+  });
+};
 
 const addComments = () => {
   const bttns = document.querySelectorAll('.add-comment');
   bttns.forEach((btn) => {
-    btn.addEventListener(('click'), (e) => {
+    btn.addEventListener('click', (e) => {
       const username = document.getElementById('username');
       const comment = document.getElementById('comment');
       const id = Number(e.target.id.slice(10));
-      if (username.value.length > 1 && comment.value.length > 4 ) {
-        addComment({ item_id:id, username: username.value, comment: comment.value});
+      if (username.value.length > 1 && comment.value.length > 4) {
+        addComment({
+          item_id: id,
+          username: username.value,
+          comment: comment.value,
+        })
         username.value = '';
         comment.value = '';
         popUpComment();
         return;
       }
       let span;
-      if(document.querySelector('.formcomment #errorComment')) {
+      if (document.querySelector('.formcomment #errorComment')) {
         span = document.querySelector('.formcomment #errorComment');
       } else {
         span = document.createElement('span');
@@ -50,7 +58,7 @@ const addComments = () => {
       }
       span.innerHTML = '';
       if (username.value.length < 2) {
-        span.innerHTML = 'user name  cannot be empty'
+        span.innerHTML = 'user name  cannot be empty';
         document.querySelector('.formcomment').appendChild(span);
       }
 
@@ -58,12 +66,11 @@ const addComments = () => {
         span.innerHTML = 'comment cannot be empty';
         document.querySelector('.formcomment').appendChild(span);
       }
-
     });
   });
 };
 
-const loadPopUpComment = ({ commentData, food}) => {
+const loadPopUpComment = ({ commentData, food }) => {
   const ul = document.getElementById('pop');
   ul.innerHTML = '';
   const li = document.createElement('li');
@@ -76,7 +83,7 @@ const loadPopUpComment = ({ commentData, food}) => {
   <p class="foodDes">${food.strCategoryDescription} </p>
   <p class='comments-title'>${
     commentData.length > 1
-      ? 'comments (' + counter(commentData)  + ')'
+      ? 'comments (' + counter(commentData) + ')'
       : 'comment (' + counter(commentData) + ')'
   } </p>
   <div class='popup-comments'>${listComments(commentData)}</div>
@@ -88,23 +95,23 @@ const loadPopUpComment = ({ commentData, food}) => {
     food.idCategory
   }' class='add-comment' >Comment</button>
   </form>
-  `
-  document.getElementById('pop').style.display = 'block'
-  ul.appendChild(li)
+  `;
+  document.getElementById('pop').style.display = 'block';
+  ul.appendChild(li);
   addComments();
   closepopup();
-}
+};
 
 const popUpComment = () => {
   const comments = document.querySelectorAll('.comments');
   comments.forEach((comment) => {
-    comment.addEventListener('click', (e) =>{
-      const id = e.target.id.slice(7);
-      fetchComments(id).then(data=>{
-        loadPopUpComment(data)
+    comment.addEventListener('click', (e) => {
+      const id = e.target.id.slice(7);;
+      fetchComments(id).then((data) => {
+        loadPopUpComment(data);
       });
-    })
+    });
   });
 };
 
-export { addLikes, popUpComment};
+export { addLikes, popUpComment };

@@ -1,4 +1,4 @@
-import getFood from './getFood.js'
+import getFood from './getFood.js';
 import { addLikes, popUpComment} from './addLikes';
 import counter from './counter.js';
 
@@ -15,7 +15,7 @@ const listFood = (baseList, involvementValue) => {
   const list = document.getElementById('food-list');
   list.innerHTML = '';
   const objectkey = getOject(involvementValue);
-  document.getElementById('foodCounter').innerHTML = `(${counter(baseList)})`
+  document.getElementById('foodCounter').innerHTML = `(${counter(baseList)})`;
   baseList.forEach(food => {
     const foodId = Number(food.idCategory);
     const newLi = document.createElement('li');
@@ -26,7 +26,7 @@ const listFood = (baseList, involvementValue) => {
   });
   addLikes();
   popUpComment();
-}
+};
 
 
 export default listFood;

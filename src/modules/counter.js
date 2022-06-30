@@ -1,5 +1,5 @@
 const counter = (arr) => {
-  return arr.length
-}
+  return arr.length;
+};
 
-export default counter
+export default counter;

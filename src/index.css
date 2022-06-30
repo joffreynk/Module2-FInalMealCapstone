@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-  'Lucida Sans', Arial, sans-serif;
+    'Lucida Sans', Arial, sans-serif;
 }
 
 body {
@@ -63,7 +63,7 @@ nav {
 }
 
 main {
-  margin: 80px 0  ;
+  margin: 80px 0;
 }
 
 main h2 {
@@ -85,7 +85,6 @@ main h2 {
   padding: 20px;
   margin-bottom: 10px;
 }
-
 
 main ul {
   display: flex;
@@ -123,7 +122,6 @@ main ul li h4 {
 .likes {
   display: flex;
   justify-content: flex-start;
-
   flex-direction: column;
 }
 
@@ -164,6 +162,11 @@ main ul li h4 {
   border: none;
 }
 
+.comments {
+  background: #373b69;
+  color: white;
+}
+
 .comments:hover {
   transform: rotate(360deg);
   transform: scale(1.01);
@@ -178,11 +181,6 @@ main ul li h4 {
   background-color: #b9eb4d;
   color: #000;
   font-weight: 700;
-}
-
-.comments {
-  background: #373b69;
-  color: white;
 }
 
 .reservations {
@@ -219,12 +217,8 @@ main ul li h4 {
   box-sizing: border-box;
   z-index: 1;
   border-radius: 10px;
-  background-color: rgba(146, 146, 146,0.8);
+  background-color: rgba(146, 146, 146, 0.8);
 }
-
-/* .popupremove {
-  display: none;
-} */
 
 .comment-pop-image img {
   width: 320px;
@@ -247,9 +241,9 @@ main ul li h4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: fixed; 
+  position: fixed;
   width: 80wv;
-  top:0;
+  top: 0;
   left: 20%;
   bottom: 5px;
   right: 20%;
@@ -281,7 +275,7 @@ main ul li h4 {
 }
 
 #comment {
-  height: 50px
+  height: 50px;
 }
 
 .add-comment {
@@ -323,8 +317,12 @@ main ul li h4 {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 footer {
@@ -380,6 +378,7 @@ footer {
     opacity: 0;
     transform: translateX(50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
