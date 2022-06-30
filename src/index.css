@@ -172,11 +172,12 @@ main ul li h4 {
 }
 
 #pop li {
-  width: 400px;
+  width: 80%;
 }
 
 .comment-pop-image img{
   width: 80%;
+  height: 350px;
 }
 
 @media screeen and (max-width: 1024px) {
