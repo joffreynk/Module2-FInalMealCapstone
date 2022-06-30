@@ -1,4 +1,4 @@
-import listFood from './ListFood.js'
+import listFood from './ListFood.js';
 
 const url = 'https://www.themealdb.com/api/json/v1/1/categories.php';
 //const involvementURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/dWoXUOjG0DcHF4rsGv6E/';
@@ -20,14 +20,14 @@ const homePage = async () => {
   let foodlist = JSON.parse(JSON.stringify( foodData.categories));
 
   listFood(foodlist, likes);
-}
+};
 
 const fetchComments = async (id) => {
   const commentResponse = await fetch(involvementURL+'/comments?item_id='+id);
   const commentData = await commentResponse.json();
   console.log(commentData);
 
-}
+};
 
 const createGame = async () => {
   const createGameUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
@@ -77,8 +77,8 @@ const addComment = async (comment) => {
     },
   };
   const results = await fetch(involvementURL+'comments/', optionsData);
-  const data = await results.text()
-  return data
+  const data = await results.text();
+  return data;
 };
 
 
