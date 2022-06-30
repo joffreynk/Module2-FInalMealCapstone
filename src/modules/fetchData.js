@@ -74,7 +74,7 @@ const addReservation = async (reservation) => {
 const addComment = async (comment) => {
   const optionsData = {
     method: 'POST',
-    body: comment,
+    body: JSON.stringify(comment),
     headers: {
       'Content-Type': 'application/json;charset=utf-8',
     },
