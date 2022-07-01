@@ -19,11 +19,17 @@
 
 
 ## Getting Started
+clone the project on the loffowing link:
 
-**clone the project and run **npm i** to install depencies.**
-**after installing dependancies run npm start**
+Run: 
+
+git clone https://github.com/JoffreyNK/Module2-FInalMealCapstone.git
+cd Module2-FInalMealCapstone
+npm install
+npm start
 
 
+The site will start loading
 
 ### Dependances to Install
 npm i webpack webpack-cli webpack-dev-server html-webpack-plugin jest css-loader style-loader --save-dev
