@@ -1,20 +1,11 @@
-import { addLike, addComment, fetchComments } from './fetchData.js';
+import { addComment, fetchComments } from './fetchData.js';
 import counter from './counter.js';
 
-const addLikes = () => {
-  const likes = document.querySelectorAll('.like');
-  likes.forEach((like) => {
-    like.addEventListener('click', (e) => {
-      const id = e.target.id.slice(4);
-      addLike({ item_id: id });
-    });
-  });
-};
 
 const listComments = (comments) => {
   let div = '';
   comments.forEach((comment) => {
-    div += `<p class='popup-single-comment' > ${comment.creation_date} ${comment.username}:  ${comment.comment}</p>`;
+    div += `<p class='popup-single-comment' > ${comment.creation_date} ${comment.username}:  ${comment.comment.slice(0, 201)}</p>`;
   });
   return div;
 };
@@ -44,7 +35,9 @@ const addComments = () => {
         });
         username.value = '';
         comment.value = '';
-        popUpComment();
+        fetchComments(id).then((data) => {
+          loadPopUpComment(data);
+        });
         return;
       }
       let span;
@@ -74,15 +67,10 @@ const loadPopUpComment = ({ commentData, food }) => {
   const li = document.createElement('li');
   li.innerHTML = `
   <span class='close-button'> &#10006; </span>
-  <div class='comment-pop-image'> <img src='${food.strCategoryThumb}' alt='${
-    food.strCategory
-  }'/> 
+  <div class='comment-pop-image'> <img src='${food.strCategoryThumb}' alt='${food.strCategory}'/> 
   <h4>${food.strCategory} </h4>
   <p class='foodDes'>${food.strCategoryDescription} </p>
-  <p class='comments-title'>${
-    commentData.length > 1
-      ? `comments ( ${counter(commentData)} )`
-      : `comment ( ${counter(commentData)} )`
+  <p class='comments-title'>${commentData.length > 1 ? `comments ( ${counter(commentData)} )` : `comment ( ${counter(commentData)} )`
   } </p>
   <div class='popup-comments'>${listComments(commentData)}</div>
   <h5 class='add-h5'>add a comment</h5>
@@ -92,24 +80,13 @@ const loadPopUpComment = ({ commentData, food }) => {
   <button type='button' id='addcomment${
     food.idCategory
   }' class='add-comment' >Comment</button>
-  </form>
-  `;
+  </form>`;
   document.getElementById('pop').style.display = 'block';
   ul.appendChild(li);
   addComments();
   closepopup();
 };
 
-const popUpComment = () => {
-  const comments = document.querySelectorAll('.comments');
-  comments.forEach((comment) => {
-    comment.addEventListener('click', (e) => {
-      const id = e.target.id.slice(7);
-      fetchComments(id).then((data) => {
-        loadPopUpComment(data);
-      });
-    });
-  });
-};
 
-export { addLikes, popUpComment };
+
+export default loadPopUpComment;

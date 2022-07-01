@@ -1,5 +1,5 @@
 import './index.css';
-import listFood from './modules/ListFood';
+import listFood from './modules/ListFood.js';
 
 const navSlide = () => {
   const burger = document.querySelector('.burger');
@@ -13,6 +13,7 @@ const navSlide = () => {
     link.style.animation = `navLinkFade o.5s ease forwards ${index / 7}s`;
   });
 };
+
 
 navSlide();
 listFood();

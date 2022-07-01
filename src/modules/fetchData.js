@@ -11,15 +11,13 @@ const homePage = async () => {
 
   const likesArr = JSON.parse(JSON.stringify(likesData));
   const foodlist = JSON.parse(JSON.stringify(foodData.categories));
-  return { foodlist, likesArr }
+  return { foodlist, likesArr };
 };
 
 const fetchComments = async (id) => {
   const foodResponse = await fetch(url);
   const foodData = await foodResponse.json();
-  const food = foodData.categories.filter(
-    (f) => Number(f.idCategory) === Number(id)
-  )[0];
+  const food = foodData.categories.filter((f) => Number(f.idCategory) === Number(id))[0];
   let commentData = [];
   const commentResponse = await fetch(`${involvementURL}comments?item_id=${id}`);
   if (commentResponse.ok) commentData = await commentResponse.json();
@@ -34,6 +32,7 @@ const addLike = async (like) => {
       'Content-Type': 'application/json;charset=utf-8',
     },
   };
+  console.log('like added');
   const results = await fetch(`${involvementURL}likes/`, optionsData);
   const data = await results.text();
   return data;
@@ -52,4 +51,9 @@ const addComment = async (comment) => {
   return data;
 };
 
-export { homePage, addLike, addComment, fetchComments };
+export {
+  homePage,
+  addLike,
+  addComment,
+  fetchComments
+};
