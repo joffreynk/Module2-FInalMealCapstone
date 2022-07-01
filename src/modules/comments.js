@@ -3,8 +3,8 @@ import counter from './counter.js';
 
 const listComments = (comments) => {
   let div = '';
-  comments.forEach(({ creation_date, username, comment}) => {
-    div += `<p class='popup-single-comment' > ${creation_date} ${username}:  ${comment}</p>`;
+  comments.forEach(({comment}) => {
+    div += `<p class='popup-single-comment' > ${comment.creation_date} ${comment.username}:  ${comment.comment}</p>`;
   });
   return div;
 };
@@ -18,7 +18,6 @@ const closepopup = () => {
     document.getElementById('pop').style.display = 'none';
   });
 };
-
 
 const addComments = () => {
   const bttns = document.querySelectorAll('.add-comment');
