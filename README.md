@@ -27,13 +27,19 @@ npm i webpack webpack-cli webpack-dev-server html-webpack-plugin jest css-loader
 
 
 
-## Author
+## Authors
 
-👤 **Joffrey**
+👤 **Joffrey Nkeshimana**
 
 - GitHub: [@joffreynk](https://github.com/JoffreyNK)
 - Twitter: [@joffreynk](https://twitter.com/home)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/joffrey-nkeshimana-15b8aa1b3/)
+
+👤 **Vincent Abuya**
+
+- GitHub: [@vabuyia](https://github.com/vabuyia)
+- Twitter: [@vabuyia](https://twitter.com/abuyag)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/vabuyia/)
 
 
 ## 🤝 Contributing
