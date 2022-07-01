@@ -3,7 +3,7 @@ import counter from './counter.js';
 
 const listComments = (comments) => {
   let div = '';
-  comments.forEach(({comment}) => {
+  comments.forEach((comment) => {
     div += `<p class='popup-single-comment' > ${comment.creation_date} ${comment.username}:  ${comment.comment}</p>`;
   });
   return div;
