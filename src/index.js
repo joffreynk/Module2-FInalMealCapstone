@@ -14,6 +14,5 @@ const navSlide = () => {
   });
 };
 
-
 navSlide();
 listFood();

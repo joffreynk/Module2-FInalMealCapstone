@@ -1,7 +1,7 @@
 import getFood from './getFood.js';
 import counter from './counter.js';
 import { addLike, homePage, fetchComments } from './fetchData.js';
-import loadPopUpComment from './comments.js';
+import { loadPopUpComment,  closepopup } from './comments.js';
 
 const getOject = (arr) => {
   const ob = {};
@@ -9,17 +9,6 @@ const getOject = (arr) => {
     ob[Number(v.item_id)] = v.likes;
   });
   return ob;
-};
-
-const addLikes = () => {
-  const likes = document.querySelectorAll('.like');
-  likes.forEach((like) => {
-    like.addEventListener('click', (e) => {
-      const id = e.target.id.slice(4);
-      addLike({ item_id: id });
-      listFood();
-    });
-  });
 };
 
 const popUpComment = () => {
@@ -32,6 +21,7 @@ const popUpComment = () => {
       });
     });
   });
+  closepopup();
 };
 
 const listFood = () => {
@@ -56,4 +46,17 @@ const listFood = () => {
     popUpComment();
   });
 };
+
+const addLikes = () => {
+  const likes = document.querySelectorAll('.like');
+  likes.forEach((like) => {
+    like.addEventListener('click', (e) => {
+      const id = e.target.id.slice(4);
+      addLike({ item_id: id });
+      listFood();
+    });
+  });
+};
+
+
 export default listFood;

@@ -1,7 +1,6 @@
 import { addComment, fetchComments } from './fetchData.js';
 import counter from './counter.js';
 
-
 const listComments = (comments) => {
   let div = '';
   comments.forEach((comment) => {
@@ -10,14 +9,28 @@ const listComments = (comments) => {
   return div;
 };
 
-const closepopup = () => {
-  const close = document.querySelector('.close-button');
-  close.addEventListener('click', () => {
-    document
-      .querySelector('#pop')
-      .removeChild(document.querySelector('#pop li'));
-    document.getElementById('pop').style.display = 'none';
-  });
+const loadPopUpComment = ({ commentData, food }) => {
+  const ul = document.getElementById('pop');
+  ul.innerHTML = '';
+  const li = document.createElement('li');
+  li.innerHTML = `
+  <span class='close-button'> &#10006; </span>
+  <div class='comment-pop-image'> <img src='${food.strCategoryThumb}' alt='${food.strCategory}'/> 
+  <h4>${food.strCategory} </h4>
+  <p class='foodDes'>${food.strCategoryDescription} </p>
+  <p class='comments-title'>${commentData.length > 1 ? `comments ( ${counter(commentData)} )` : `comment ( ${counter(commentData)} )`
+  } </p>
+  <div class='popup-comments'>${listComments(commentData)}</div>
+  <h5 class='add-h5'>add a comment</h5>
+  <form class='formcomment'>
+  <input type='text' name='username' id='username' placeholder= 'Your Name' /> <br/>
+  <textarea placeholder='your insights' rows='4' name='comment' id='comment'></textarea><br/>
+  <button type='button' id='addcomment${
+    food.idCategory
+  }' class='add-comment' >Comment</button>
+  </form>`;
+  document.getElementById('pop').style.display = 'block';
+  ul.appendChild(li);
 };
 
 const addComments = () => {
@@ -61,32 +74,15 @@ const addComments = () => {
   });
 };
 
-const loadPopUpComment = ({ commentData, food }) => {
-  const ul = document.getElementById('pop');
-  ul.innerHTML = '';
-  const li = document.createElement('li');
-  li.innerHTML = `
-  <span class='close-button'> &#10006; </span>
-  <div class='comment-pop-image'> <img src='${food.strCategoryThumb}' alt='${food.strCategory}'/> 
-  <h4>${food.strCategory} </h4>
-  <p class='foodDes'>${food.strCategoryDescription} </p>
-  <p class='comments-title'>${commentData.length > 1 ? `comments ( ${counter(commentData)} )` : `comment ( ${counter(commentData)} )`
-  } </p>
-  <div class='popup-comments'>${listComments(commentData)}</div>
-  <h5 class='add-h5'>add a comment</h5>
-  <form class='formcomment'>
-  <input type='text' name='username' id='username' placeholder= 'Your Name' /> <br/>
-  <textarea placeholder='your insights' rows='4' name='comment' id='comment'></textarea><br/>
-  <button type='button' id='addcomment${
-    food.idCategory
-  }' class='add-comment' >Comment</button>
-  </form>`;
-  document.getElementById('pop').style.display = 'block';
-  ul.appendChild(li);
+const closepopup = () => {
+  const close = document.querySelector('.close-button');
+  close.addEventListener('click', () => {
+    document
+      .querySelector('#pop')
+      .removeChild(document.querySelector('#pop li'));
+    document.getElementById('pop').style.display = 'none';
+  });
   addComments();
-  closepopup();
 };
 
-
-
-export default loadPopUpComment;
+export { loadPopUpComment,  closepopup };

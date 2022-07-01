@@ -32,7 +32,6 @@ const addLike = async (like) => {
       'Content-Type': 'application/json;charset=utf-8',
     },
   };
-  console.log('like added');
   const results = await fetch(`${involvementURL}likes/`, optionsData);
   const data = await results.text();
   return data;
@@ -55,5 +54,5 @@ export {
   homePage,
   addLike,
   addComment,
-  fetchComments
+  fetchComments,
 };
