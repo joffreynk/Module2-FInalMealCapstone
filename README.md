@@ -1,62 +1,53 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Javascript Group captsone
 
-> Description the project.
+> Javascript Group captsone is a project built with Joffrey and Vincent at Javascript Module completion. It has many functionalities where a user visit the homepage. the application loads data from two APIs and display them on interface. when a user click on heart icon it increments the number of likes on that specific item. when a user click on comments button It shows project descriptions and its comments. it gives also the functionality of adding new comments to the Item.
 
+##Video Link 
+[video Link][https://drive.google.com/file/d/1gykehauOaQ9MKBOsU18KaYj4WFxPWBKd/view?usp=sharing]
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML
+- CSS
+- JAVASCRIPT
+- WEBPACK
+- API
 
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+**clone the project and run **npm i** to install depencies.**
+**after installing dependancies run npm start**
 
 
-To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
+### Dependances to Install
+npm i webpack webpack-cli webpack-dev-server html-webpack-plugin jest css-loader style-loader --save-dev
 
 
 
 ## Authors
 
-👤 **Author1**
+👤 **Joffrey Nkeshimana**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@joffreynk](https://github.com/JoffreyNK)
+- Twitter: [@joffreynk](https://twitter.com/home)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/joffrey-nkeshimana-15b8aa1b3/)
 
-👤 **Author2**
+👤 **Vincent Abuya**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@vabuyia](https://github.com/vabuyia)
+- Twitter: [@vabuyia](https://twitter.com/abuyag)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/vabuyia/)
+
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
+Feel free to comment in issues section any bugs or changes that you would like to apply on this project
+check the [issues page](../../issues/).
 
 ## Show your support
 
@@ -64,9 +55,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+This work was done in collaborative teams  and you cannot find it anywhere else
 
 ## 📝 License
 
