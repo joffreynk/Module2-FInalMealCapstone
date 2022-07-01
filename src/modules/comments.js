@@ -18,16 +18,13 @@ const loadPopUpComment = ({ commentData, food }) => {
   <div class='comment-pop-image'> <img src='${food.strCategoryThumb}' alt='${food.strCategory}'/> 
   <h4>${food.strCategory} </h4>
   <p class='foodDes'>${food.strCategoryDescription} </p>
-  <p class='comments-title'>${commentData.length > 1 ? `comments ( ${counter(commentData)} )` : `comment ( ${counter(commentData)} )`
-  } </p>
+  <p class='comments-title'>${commentData.length > 1 ? `comments ( ${counter(commentData)} )` : `comment ( ${counter(commentData)} )`} </p>
   <div class='popup-comments'>${listComments(commentData)}</div>
   <h5 class='add-h5'>add a comment</h5>
   <form class='formcomment'>
   <input type='text' name='username' id='username' placeholder= 'Your Name' /> <br/>
   <textarea placeholder='your insights' rows='4' name='comment' id='comment'></textarea><br/>
-  <button type='button' id='addcomment${
-    food.idCategory
-  }' class='add-comment' >Comment</button>
+  <button type='button' id='addcomment${food.idCategory}' class='add-comment' >Comment</button>
   </form>`;
   document.getElementById('pop').style.display = 'block';
   ul.appendChild(li);
@@ -85,4 +82,4 @@ const closepopup = () => {
   addComments();
 };
 
-export { loadPopUpComment,  closepopup };
+export { loadPopUpComment, closepopup };
