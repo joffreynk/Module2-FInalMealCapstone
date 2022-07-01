@@ -11,7 +11,7 @@ const navSlide = () => {
     nav.classList.toggle('nav-active');
   });
   navLinks.forEach((link, index) => {
-    link.style.animation = 'navLinkFade o.5s ease forwards ${index /7 }s';
+    link.style.animation = `navLinkFade o.5s ease forwards ${index/7 }s`;
   });
 };
 

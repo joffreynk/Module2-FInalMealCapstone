@@ -81,8 +81,8 @@ const loadPopUpComment = ({ commentData, food }) => {
   <p class='foodDes'>${food.strCategoryDescription} </p>
   <p class='comments-title'>${
     commentData.length > 1
-      ? 'comments (' + counter(commentData) + ')'
-      : 'comment (' + counter(commentData) + ')'
+      ? `comments ( ${counter(commentData)} )`
+      : `comment ( ${counter(commentData)} )`
   } </p>
   <div class='popup-comments'>${listComments(commentData)}</div>
   <h5 class='add-h5'>add a comment</h5>

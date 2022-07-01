@@ -1,5 +1,3 @@
-const counter = (arr) => {
-  return arr.length;
-};
+const counter = (arr) => arr.length;
 
 export default counter;

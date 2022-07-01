@@ -1,5 +1,5 @@
 import getFood from './getFood.js';
-import { addLikes, popUpComment } from './addLikes';
+import { addLikes, popUpComment } from './addLikes.js';
 import counter from './counter.js';
 
 const getOject = (arr) => {
@@ -20,9 +20,7 @@ const listFood = (baseList, involvementValue) => {
     const newLi = document.createElement('li');
     newLi.setAttribute('id', `food${food.idCategory}`);
     const likes = objectkey[foodId];
-    foodId in objectkey
-      ? (newLi.innerHTML = getFood(food, likes))
-      : (newLi.innerHTML = getFood(food));
+    foodId in objectkey ? newLi.innerHTML = getFood(food, likes) : newLi.innerHTML = getFood(food);
     list.appendChild(newLi);
   });
   addLikes();
