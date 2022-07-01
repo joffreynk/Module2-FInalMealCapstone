@@ -1,4 +1,3 @@
-/* eslint-disable */
 import getFood from './getFood.js';
 import { addLikes, popUpComment } from './addLikes';
 import counter from './counter.js';
@@ -13,7 +12,7 @@ const getOject = (arr) => {
 
 const listFood = (baseList, involvementValue) => {
   const list = document.getElementById('food-list');
-  list.innerHTML = ''
+  list.innerHTML = '';
   const objectkey = getOject(involvementValue);
   document.getElementById('foodCounter').innerHTML = `(${counter(baseList)})`;
   baseList.forEach((food) => {

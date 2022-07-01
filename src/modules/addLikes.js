@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import { addLike, addComment, fetchComments } from './fetchData.js';
 import counter from './counter.js';
 
@@ -14,7 +12,7 @@ const addLikes = () => {
 };
 
 const listComments = (comments) => {
-  let div = ''
+  let div = '';
   comments.forEach((comment) => {
     div += `<p class='popup-single-comment' > ${comment.creation_date} ${comment.username}:  ${comment.comment}</p>`;
   });
@@ -43,7 +41,7 @@ const addComments = () => {
           item_id: id,
           username: username.value,
           comment: comment.value,
-        })
+        });
         username.value = '';
         comment.value = '';
         popUpComment();
@@ -75,19 +73,19 @@ const loadPopUpComment = ({ commentData, food }) => {
   ul.innerHTML = '';
   const li = document.createElement('li');
   li.innerHTML = `
-  <span class="close-button"> &#10006; </span>
+  <span class='close-button'> &#10006; </span>
   <div class='comment-pop-image'> <img src='${food.strCategoryThumb}' alt='${
     food.strCategory
   }'/> 
   <h4>${food.strCategory} </h4>
-  <p class="foodDes">${food.strCategoryDescription} </p>
+  <p class='foodDes'>${food.strCategoryDescription} </p>
   <p class='comments-title'>${
     commentData.length > 1
       ? 'comments (' + counter(commentData) + ')'
       : 'comment (' + counter(commentData) + ')'
   } </p>
   <div class='popup-comments'>${listComments(commentData)}</div>
-  <h5 class="add-h5">add a comment</h5>
+  <h5 class='add-h5'>add a comment</h5>
   <form class='formcomment'>
   <input type='text' name='username' id='username' placeholder= 'Your Name' /> <br/>
   <textarea placeholder='your insights' rows='4' name='comment' id='comment'></textarea><br/>
@@ -106,7 +104,7 @@ const popUpComment = () => {
   const comments = document.querySelectorAll('.comments');
   comments.forEach((comment) => {
     comment.addEventListener('click', (e) => {
-      const id = e.target.id.slice(7);;
+      const id = e.target.id.slice(7);
       fetchComments(id).then((data) => {
         loadPopUpComment(data);
       });
