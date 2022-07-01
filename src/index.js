@@ -1,10 +1,18 @@
-function component() {
-  const element = document.createElement('div');
+import './index.css';
+import listFood from './modules/ListFood.js';
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+const navSlide = () => {
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav-links');
+  const navLinks = document.querySelectorAll('.nav-links li');
 
-  return element;
-}
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('nav-active');
+  });
+  navLinks.forEach((link, index) => {
+    link.style.animation = `navLinkFade o.5s ease forwards ${index / 7}s`;
+  });
+};
 
-document.body.appendChild(component());
+navSlide();
+listFood();
