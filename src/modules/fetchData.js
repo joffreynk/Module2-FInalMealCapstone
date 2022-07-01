@@ -1,5 +1,3 @@
-import listFood from './ListFood.js';
-
 const url = 'https://www.themealdb.com/api/json/v1/1/categories.php/';
 
 const involvementURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/4UvdTn5NAXeyK3iSlBaQ/';
@@ -11,9 +9,9 @@ const homePage = async () => {
   const likesREsponse = await fetch(`${involvementURL}likes/`);
   const likesData = await likesREsponse.json();
 
-  const likes = JSON.parse(JSON.stringify(likesData));
+  const likesArr = JSON.parse(JSON.stringify(likesData));
   const foodlist = JSON.parse(JSON.stringify(foodData.categories));
-  listFood(foodlist, likes);
+  return { foodlist, likesArr }
 };
 
 const fetchComments = async (id) => {
@@ -28,18 +26,6 @@ const fetchComments = async (id) => {
   return { commentData, food };
 };
 
-const createID = async () => {
-  const createGameUrl =
-    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
-  const optionsData = {
-    method: 'POST',
-  };
-  const results = await fetch(createGameUrl, optionsData);
-  const data = await results.text();
-  console.log(data);
-  return data;
-};
-
 const addLike = async (like) => {
   const optionsData = {
     method: 'POST',
@@ -50,7 +36,6 @@ const addLike = async (like) => {
   };
   const results = await fetch(`${involvementURL}likes/`, optionsData);
   const data = await results.text();
-  homePage();
   return data;
 };
 
